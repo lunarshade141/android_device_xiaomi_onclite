@@ -236,6 +236,8 @@ PRODUCT_PACKAGES += \
     ONCRemover
 
 # Display
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.picture_in_picture.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.picture_in_picture.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.xml \
