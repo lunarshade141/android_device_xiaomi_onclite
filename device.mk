@@ -237,6 +237,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 $(call soong_config_set_bool,libui,legacy_gralloc,true)
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.picture_in_picture.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.picture_in_picture.xml \
@@ -249,8 +250,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.faketouch.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.faketouch.multitouch.jazzhand.xml
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0 \
-    android.frameworks.displayservice@1.0.vendor \
+    lineage.frameworks.displayservice@1.0 \
+    lineage.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
