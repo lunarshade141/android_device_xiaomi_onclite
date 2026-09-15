@@ -231,10 +231,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Device specific remove packages
 PRODUCT_PACKAGES += \
     ONCRemover
