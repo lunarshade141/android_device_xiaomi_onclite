@@ -430,6 +430,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.onc
 
 # Media
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_profiles_8953.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media/media_profiles_8953.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
