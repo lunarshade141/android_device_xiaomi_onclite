@@ -1,5 +1,0 @@
-soong_namespace {
-    imports: [
-        "device/xiaomi/onclite/platform/qcom/display/display-commonsys-intf"
-    ],
-}
