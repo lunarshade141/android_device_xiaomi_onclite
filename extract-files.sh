@@ -63,6 +63,9 @@ function blob_fixup() {
     vendor/lib/hw/camera.msm8953.so)
         [ "$2" = "" ] && return 0
         grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+        LC_ALL=C perl -0777 -pi -e 's/android\.frameworks\.displayservice\@1\.0\.so/lineage.frameworks.displayservice\@1.0.so/g' "${2}"
+        LC_ALL=C perl -0777 -pi -e 's/7android10frameworks14displayservice/7lineage10frameworks14displayservice/g' "${2}"
+        LC_ALL=C perl -0777 -pi -e 'my $p="_ZN7lineage10frameworks14displayservice4V1_014IEventCallback4pingEv"; s/_ZN7lineage10frameworks14displayservice4V1_01[45]I[A-Za-z0-9_]*(?:linkToDeath|unlinkToDeath|getDebugInfo|getHashChain|interfaceChain|interfaceDescriptor|5debug|registerForNotifications)[A-Za-z0-9_]*/$p . "\0" x (length($&) - length($p))/ge' "${2}"
         ;;
     vendor/bin/pm-service)
         [ "$2" = "" ] && return 0
