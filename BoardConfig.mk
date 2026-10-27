@@ -86,8 +86,6 @@ KERNEL_COMPILER_PATH := $(abspath .)/prebuilts/clang/kernel/linux-x86/clang-$(KE
 ifneq ($(wildcard $(KERNEL_COMPILER_PATH)),)
     TARGET_KERNEL_CLANG_PATH := $(KERNEL_COMPILER_PATH)
     TARGET_KERNEL_CLANG_VERSION := $(KERNEL_COMPILER_NAME)
-    TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := $(KERNEL_COMPILER_PATH)/bin/arm-linux-gnueabi-
-    TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(KERNEL_COMPILER_PATH)/bin/aarch64-linux-gnu-
     TARGET_KERNEL_LLVM_BINUTILS := false
 else
     # Use default AOSP Clang if custom compiler is not available
