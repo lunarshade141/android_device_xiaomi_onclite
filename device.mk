@@ -611,7 +611,10 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
 
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.usb.uvc.enabled=false
+    ro.usb.uvc.enabled=false \
+    vendor.usb.diag.func.name=diag \
+    vendor.usb.use_ffs_mtp=0 \
+    vendor.usb.use_gadget_hal=0
 
 # User-space Fastboot
 TARGET_DISABLE_FASTBOOTD := true
