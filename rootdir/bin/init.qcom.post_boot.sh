@@ -730,8 +730,7 @@ else
         echo 0 > /sys/module/process_reclaim/parameters/enable_process_reclaim
     fi
 
-    # Memory optimization
-    # RAM Plus Tweaking
+    # zRAM
     mkswap /dev/block/zram0
     swapon /dev/block/zram0
 
